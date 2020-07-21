@@ -1,6 +1,7 @@
 const express = require('express');
 const PORT = process.env.PORT || 5000;
 const mongoose = require('mongoose');
+const routes = require('')
 
 const app = express();
 
@@ -18,7 +19,8 @@ mongoose.connect(
     {
         useCreateIndex: true,
         useNewUrlParser: true
-    }
+    },
+    console.log('mongoDB connected')
 );
 
 //started the API server
