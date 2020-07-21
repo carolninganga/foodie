@@ -1,0 +1,23 @@
+{
+  "name": "foodie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolninganga/foodie.git"
+  },
+  "author": "Caroline Ninganga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolninganga/foodie/issues"
+  },
+  "homepage": "https://github.com/carolninganga/foodie#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
