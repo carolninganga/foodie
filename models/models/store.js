@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
+
 const Schema = mongoose.Schema;
+
 const storeSchema = new Schema({
     name: {
         type: String,
@@ -17,7 +19,7 @@ const storeSchema = new Schema({
     state: {
         type: String
     },
-    zip_code: {
+    zipcode: {
         type: String
     },
     image: {
@@ -32,6 +34,9 @@ const storeSchema = new Schema({
     source: {
         type: String
     }
+
 });
+
 const Store = mongoose.model("Store", storeSchema);
-module.exports = Store;
+
+module.exports = Store;  

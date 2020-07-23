@@ -1,20 +1,29 @@
 import axios from 'axios';
 
 export default {
-    //get store from yelp API
-    getStore: function(term, location) {
-        return axios.get('/api/yelp', { params: { term: term, location:location }});  
+    // Get stores from api
+    getStores: function(term, location) {
+        return axios({
+                'method': 'GET',
+                 'url': `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`,
+                //'url': `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${location}`,
+    
+                'headers': {
+                    'Content-Type': 'application/json',
+                     'Authorization': `Bearer ${process.env.REACT_APP_YELP_API_KEY}` 
+                }
+            })
     },
-    //get all saved stores
+
+    // Get all saved stores
     getSavedStores: function() {
-        return axios.get('/api/stores');
+        return axios.get("/api/store")
     },
-    //Deletes the saved store with the given id 
-    deleteStore: function(id) {
-        return axios.delete('/api/stores' + id);
+    deleteStore: function(storeData) {
+        return axios.delete("/api/store", storeData);
     },
-    //save to database 
-    saveStore: function(storeData) {
-        return axios.post('/api/stores', storeData)
+    // Save a store to the database
+    saveStore: function(storeData, id) {
+        return axios.post(`/api/store/${id}`, storeData);
     }
 }

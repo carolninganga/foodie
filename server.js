@@ -1,29 +1,27 @@
 const express = require('express');
-const PORT = process.env.PORT || 5000;
-const mongoose = require('mongoose');
-const routes = require('')
+const mongoose = require("mongoose");
+const routes = require("./routes");
 
 const app = express();
 
-//AJAX body parsing requests
-app.use(express.urlencoded({ extended: true }));
+const PORT = process.env.PORT || 3002;
+
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
-//static 
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
+if(process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"))
 }
 
+app.use(routes);
+
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/foodie',
+    process.env.MONGODB_URI || "mongodb://localhost/foodie",
     {
         useCreateIndex: true,
         useNewUrlParser: true
     },
-    console.log('mongoDB connected')
-);
+    console.log("mongoDB is connected")
+)
 
-//started the API server
-app.listen(PORT, () => 
-console.log(`app listening on PORT ${PORT}`)
-);
+app.listen(PORT, () => console.log(`API Server is listening on PORT ${PORT}`));
