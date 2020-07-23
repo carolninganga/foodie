@@ -13,7 +13,7 @@ function Form({ term, location, handleInputChange, handleFormSubmit }) {
             id="Name"
             type="text"
             value={term}
-            placeholder="Search for stores"
+            placeholder="Search for desired food item"
             name="term"
             onChange={handleInputChange}
             required />
@@ -26,7 +26,7 @@ function Form({ term, location, handleInputChange, handleFormSubmit }) {
             id="Location"
             type="text"
             value={location} 
-            placeholder="Search for location"
+            placeholder="Enter your location"
             name="location"
             onChange={handleInputChange}
             required />

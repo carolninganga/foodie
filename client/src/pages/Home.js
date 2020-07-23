@@ -14,7 +14,7 @@ class Home extends Component {
         stores: [],
         term: '',
         location: '',
-        message: 'Search For A Restaurant'
+        message: 'What do you feel like eating'
     };
 
     handleInputChange = event => {

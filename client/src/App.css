@@ -1,4 +1,7 @@
 body {
     background-image: url("./components/assets/board-bunch-cooking-food-349609.jpg");
     background-color: #cccccc;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
