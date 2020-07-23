@@ -24,7 +24,7 @@ npm run start
 Caroline Ning'ang'a
 
 ## Link to project URL
-https://convenienc.herokuapp.com/
+https://dashboard.heroku.com/apps/foodie03
 
 ## Tests
 
