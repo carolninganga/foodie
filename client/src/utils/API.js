@@ -19,8 +19,8 @@ export default {
     getSavedStores: function() {
         return axios.get("/api/store")
     },
-    deleteStore: function(storeData) {
-        return axios.delete("/api/store", storeData);
+    deleteStore: function(id) {
+        return axios.delete("/api/store", id);
     },
     // Save a store to the database
     saveStore: function(storeData, id) {

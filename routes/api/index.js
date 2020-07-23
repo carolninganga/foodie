@@ -12,7 +12,7 @@ router.use('/store', storeRoutes);
 //for anything else render the html page
 
 router.use(function(req, res) {
-    res.sendFile(path.join(_dirname, '../../client/build/index.html'))
+    res.sendFile(path.join(__dirname, '../../client/build/index.html'))
 });
 
 module.exports = router;
