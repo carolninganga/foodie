@@ -6,7 +6,7 @@ function Card({ icon, name, children }) {
             <div className="card-header">
                 <h3>
                     <strong>
-                        <i className={`fa fa-${icon}`} aria-hidden="true" />{name} 
+                       {name} 
                     </strong>
                 </h3>
             </div>

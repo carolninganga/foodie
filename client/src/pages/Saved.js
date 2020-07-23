@@ -16,6 +16,16 @@ class Saved extends Component {
         this.getSavedStores();
     }
 
+    // getSavedStores = () => {
+    //     API.getSavedStores()
+    //     //.then(res => console.log(res.data))
+    //     .then(res => 
+    //         this.setState({
+    //             stores: res.data
+    //         })
+    //     ).catch(err => console.log(err));
+    // }
+
     getSavedStores = () => {
         API.getSavedStores()
         .then(res => 
@@ -25,8 +35,11 @@ class Saved extends Component {
         ).catch(err => console.log(err));
     }
 
+
+
     handleStoreDelete = id => {
-        API.deleteStore(id).then(res => this.getSavedStores());
+        API.deleteStore(id).then(
+            res => this.getSavedStores());
     }
     render() {
         return (
@@ -55,7 +68,7 @@ class Saved extends Component {
                                         city={store.city}
                                         state={store.state}
                                         zip_code={store.zip_code}
-                                        image={store.image_url}
+                                        image={store.image}
                                         url={store.url}
                                         rating={store.rating}
                                         Button={()=> (

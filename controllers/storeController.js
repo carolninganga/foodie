@@ -4,6 +4,7 @@ const db = require("../models");
 module.exports = {
     findAll: function(req, res) {
         db.Store.find(req.query)
+            // .then(dbStore => console.log("findall", dbStore))
             .then(dbStore => res.json(dbStore))
             .catch(err => res.status(422).json(err))
     },
@@ -13,8 +14,8 @@ module.exports = {
             .catch(err => res.status(422).json(err))
     },
     create: function(req, res) {
-        console.log("po",req)
-        console.log("po1",req.body)
+        // console.log("po",req)
+        // console.log("po1",req.body)
 
         db.Store.create(req.body)
             .then(dbStore => res.json(dbStore))
