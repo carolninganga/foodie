@@ -48,8 +48,8 @@ class Home extends Component {
         API.saveStore({
             yelpId: store.id,
             name: store.name,
-            phone: store.phone,
-            street: store.location && store.location.street,
+            phone: store.display_phone,
+            street: store.location && store.location.address1,
             city: store.location && store.location.city,
             state: store.location && store.location.state,
             zip_code: store.location && store.location.zip_code,
@@ -92,8 +92,8 @@ class Home extends Component {
                                         <Store 
                                             key={store.id}
                                             name={store.name}
-                                            phone={store.phone}
-                                            street={store.location && store.location.street}
+                                            phone={store.display_phone}
+                                            street={store.location && store.location.address1}
                                             city={store.location && store.location.city}
                                             state={store.location && store.location.state}
                                             zip_code={store.location && store.location.zip_code}
