@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home';
 import Saved from './pages/Saved';
 import NoMatch from './pages/NoMatch';
-import Contact from './pages/Contact';
+import About from './pages/About';
 import Nav from './components/Nav';
 
 
@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/saved" component={Saved} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/about" component={About} />
           <Route component={NoMatch} />
         </Switch> 
       </div>

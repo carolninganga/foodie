@@ -25,6 +25,7 @@ export default class ContactUs extends Component {
         }
     handleSubmit(event) {
         event.preventDefault();
+        console.log("test");
         Axios.post('/api/contact-us/send', this.state).then(function(res){
             // console.log(res);
             alert("Your message has been sent to the Foodie Team!")

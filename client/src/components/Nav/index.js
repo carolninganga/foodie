@@ -65,8 +65,8 @@ class Nav extends Component {
               <Link
                 style={{color:"white"}}
                 onClick={this.toggleNav}
-                className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}
-                to="/contact"
+                className={window.location.pathname === "/about" ? "nav-link active" : "nav-link"}
+                to="/about"
               >
                 Contact
               </Link>

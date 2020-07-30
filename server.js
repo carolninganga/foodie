@@ -14,6 +14,8 @@ if(process.env.NODE_ENV === "production") {
 }
 
 app.use(routes);
+//app.use('/api/contact-us', require('./routes/api/contact-us'));
+
 
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/foodie",
