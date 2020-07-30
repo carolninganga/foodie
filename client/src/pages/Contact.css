@@ -47,3 +47,9 @@
   .btnb:hover {
   background-color: blueviolet;
   }
+
+  .container {
+      background-color: rgb(102, 160, 222);
+      width: 60%;
+      margin-top: 15px;
+  }

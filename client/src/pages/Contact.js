@@ -4,6 +4,7 @@ import React from 'react';
 // import Footer from '../layout/Footer/Footer';
 import './Contact.css';
 import Caroline from './Caroline.jpeg';
+import ContactUs from '../components/ContactUs/ContactUs'
 
 
 const About = () => {
@@ -44,6 +45,10 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+      <ContactUs />
+      </div>
+
     </div>
   );
 };
