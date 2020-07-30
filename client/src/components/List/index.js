@@ -1,11 +1,23 @@
 import React from "react";
 import "./style.css";
-// This component exports both the List and ListItem components
+
+
+const gridContainerStyle = {
+  display: "grid",
+  gridTemplateColumns: "auto auto auto",
+  padding: "10px"
+}
+
+const gridItemStyle = {
+  backgroundColor: "rgba(255, 255, 255, 0.8)",
+  textAlign: "center"
+}
+
 export const List = ({ children }) => (
-  <ul className="list-group">
+  <div style={gridContainerStyle}>
     {children}
-  </ul>
+  </div>
 );
 export function ListItem({ children }) {
-  return <li className="list-group-item">{children}</li>;
+  return <div style={gridItemStyle}>{children}</div>;
 }

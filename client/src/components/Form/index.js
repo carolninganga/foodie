@@ -39,7 +39,7 @@ function Form({ term, location, handleInputChange, handleFormSubmit }) {
                 className="btn btn-lg float-right" style={{backgroundColor: "#2196f3", color: "white"}}
             >
             Search
-            </button>
+            </button> 
         </div>
         </form>
     )
