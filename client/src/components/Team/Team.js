@@ -1,29 +1,48 @@
 import React from 'react'
 import styles from './Team.module.css'
 
+
 const Team = () => (
+<div className="container">
 
-    <div className={styles.cf} className={styles.teamcontainer}>
-        <h1 className={styles.teamh1}>Our Team</h1>
-    <div className={styles.teammember}>
-      <img className={styles.teamphoto} src="https://cdn.glitch.com/823d971b-2ee5-4e17-bb98-ec24b973c4c0%2FScreen%20Shot%202020-07-29%20at%209.14.15%20PM.png?v=1596072585996"/>
-      <h4>Caroline Ninganga</h4>
-      <span>Office Manager/ Technical Support Specialist entering the Full Stack Web Developer space</span>
-      <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/carolineninganga/" id="linkedin">
-                    <i className="fab fa-linkedin-in"> </i>
-                  </a>
-    </div>
+<div className="row mt-5 pt-5">
+<h1 className="mt-3" style={{margin: "0 auto", color: "white"}}>Our Team</h1>
+</div>
+<div className="row justify-content-between">
 
-    <div className={styles.teammember}>
-    <img className={styles.teamphoto} src="https://cdn.glitch.com/cd99f035-ecbc-4ddd-9a8c-d2f6b5fff534%2Ftwitterpic.jpg?v=1572969184446"/>
-      <h4>Yaheng Wu</h4>
-      <span>Web developer with a diverse background in accounting and information systems</span>
-       <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/yahengwu/" id="linkedin" className="waves-effect waves-light" type="button" role="button">
-                    <i className="fab fa-linkedin-in"> </i>
-                  </a>
-    </div> 
+<div className="col-md-5 mt-3">
+  <div className={styles.member}>
+    <img src="https://cdn.glitch.com/f28949c6-6f44-4abb-a9a1-6a9e90371a91%2FIMG-20200729-WA0000_mh1596115301303.jpg?v=1596115348329"/>
+    <h2>Caroline Ninganga</h2>
+    <p className={styles.who}>Web Developer</p>
+    <p className={styles.membertext}>Full-Stack Web Developer with a background in Education and Healthcare industry.</p>
+    
+    <div className={styles.socicons}>
   
- </div>
+      <a target="_blank" href="https://www.linkedin.com/in/carolineninganga/"><i className="fab fa-linkedin-in"></i></a>
+     
+    </div>
+    
+  </div>
+  </div>
+
+  <div className="col-md-5 mt-3">
+  <div className={styles.member}>
+    <img src="https://cdn.glitch.com/f28949c6-6f44-4abb-a9a1-6a9e90371a91%2F52837649.jpg?v=1596115147721"/>
+    <h2>Yaheng Wu</h2>
+    <p className={styles.who}>Web Developer</p>
+    <p className={styles.membertext}>Full-Stack Web Developer with a background in Accounting and Information Systems.</p>
+    
+    <div className={styles.socicons}>
+   
+      <a target="_blank" href="https://www.linkedin.com/in/yahengwu/"><i className="fab fa-linkedin-in"></i></a>
+  
+    </div>
+    
+  </div>
+  </div>
+  </div>
+</div>
 )
 
 

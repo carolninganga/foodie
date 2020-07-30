@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-export default class ContactUs extends Component {
+class ContactUs extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,11 +25,8 @@ export default class ContactUs extends Component {
         }
     handleSubmit(event) {
         event.preventDefault();
-        console.log("test");
         Axios.post('/api/contact-us/send', this.state).then(function(res){
-            // console.log(res);
             alert("Your message has been sent to the Foodie Team!")
-
         }).catch(function(err){
             console.log(err);
         });
@@ -43,26 +40,33 @@ export default class ContactUs extends Component {
         render() {
             
         return (
-            <div>
-            
-            <div className="ContactUs">
+<div className="container">
+<div className="row mt-3 text-center">
+<h1 className="mt-3" style={{margin: "0 auto", color: "white"}}>Contact Us</h1>
+</div>
+<div className="row justify-content-between mt-5 mb-5">     
+        <div className="ContactUs col-md-12">
+       
             <form id="contact-us-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
             <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                <label htmlFor="name" style={{color: "white"}}>Name</label>
+                <input style={{color:"white"}} type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
             </div>
             <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Email address</label>
-                <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                <label htmlFor="exampleInputEmail1" style={{color: "white"}}>Email address</label>
+                <input style={{color:"white"}} type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
             </div>
             <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                <label htmlFor="message" style={{color: "white"}}>Message</label>
+                <textarea style={{color: "white"}} className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary btn-block">Submit</button>
             </form>
             </div>
-            </div>
-        );
-    };
-};
+    </div>
+    </div>
+
+ )}}
+
+
+export default ContactUs;

@@ -8,7 +8,7 @@ import API from '../utils/API';
 import { Col, Row, Container } from '../components/Grid';
 import { List } from '../components/List';
 import Form from "../components/Form";
-//import SimpleForm from "../components/Chatbot/Chat";
+// import SimpleForm from "../components/Chatbot/Chat";
 
 class Home extends Component {
     state = {
@@ -130,7 +130,7 @@ class Home extends Component {
                         </Card>
                     </Col>
                 </Row>
-                {/* <SimpleForm /> */}
+                {/* <SimpleForm />  */}
                 <Footer />
             </Container>
         )
