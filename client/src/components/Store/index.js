@@ -3,7 +3,7 @@ import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 import "./style.css";
 
-function Store( { name, phone, street, city, state, zip_code, image, rating, url, Button }) {
+function Store( { name, phone, street, city, state, zip_code, image, rating, url, lat, lon, Button }) {
     return (
         <ListItem> 
             <Row className="flex-wrap-reverse">
@@ -26,6 +26,8 @@ function Store( { name, phone, street, city, state, zip_code, image, rating, url
                 <Col size="md-6">
                 {phone && <p className="font-italic">{phone}</p>} 
                     <p className="font-italic small">{street}</p>
+                    <p className="font-italic small">{lat}</p>
+                    <p className="font-italic small">{lon}</p>
                     <p className="font-italic small"><i class="fas fa-map-marker-alt"> {city} {state} {zip_code }</i></p>
                 </Col>
             </Row>

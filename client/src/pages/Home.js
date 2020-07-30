@@ -3,10 +3,12 @@ import React, { Component } from "react";
 import Card from '../components/Card';
 import Store from '../components/Store';
 import Footer from '../components/Footer';
+// import MapChart from '../components/MapChart/MapChart'
 import API from '../utils/API';
 import { Col, Row, Container } from '../components/Grid';
 import { List } from '../components/List';
 import Form from "../components/Form";
+//import SimpleForm from "../components/Chatbot/Chat";
 
 class Home extends Component {
     state = {
@@ -25,7 +27,9 @@ class Home extends Component {
 
     getStores = () => {
         API.getStores(this.state.term, this.state.location)
+        
         .then(res => 
+            // console.log(res)
             this.setState({
                 stores: res.data.businesses
             })
@@ -56,6 +60,8 @@ class Home extends Component {
             image: store.image_url,
             url: store.url,
             rating: store.rating,
+            lat: store.coordinates.latitude,
+            lon: store.coordinates.longitude,
             source: "yelp"
         }, store.id).then(() => this.getStores());
     }
@@ -85,6 +91,14 @@ class Home extends Component {
 
                 <Row>
                     <Col size="md-12">
+                        {/* {this.state.stores.map(store => (
+                            // <MapChart 
+                            // key={store.id}
+                            // name={store.name}
+                            // lat={store.lat}
+                            // lon={store.lon}
+                            //  />
+                        ))} */}
                         <Card title="Results">
                             {this.state.stores.length ? (
                                 <List>
@@ -100,6 +114,8 @@ class Home extends Component {
                                             image={store.image_url}
                                             url={store.url}
                                             rating={store.rating} 
+                                            lat={store.coordinates.latitude}
+                                            lon={store.coordinates.longitude}
                                             Button={()=> (
                                                 <button
                                                     onClick={()=> this.handleStoreSave(store.id)}
@@ -114,6 +130,7 @@ class Home extends Component {
                         </Card>
                     </Col>
                 </Row>
+                {/* <SimpleForm /> */}
                 <Footer />
             </Container>
         )

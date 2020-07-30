@@ -71,6 +71,8 @@ class Saved extends Component {
                                         image={store.image}
                                         url={store.url}
                                         rating={store.rating}
+                                        lat={store.lat}
+                                        lon={store.lon}
                                         Button={()=> (
                                             <button
                                                 style={{backgroundColor: "#2196f3", color: "white"}}

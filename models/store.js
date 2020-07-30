@@ -29,6 +29,12 @@ const storeSchema = new Schema({
     url: {
         type: String
     },
+    lat: {
+        type: String
+    },
+    lon: {
+        type: String
+    },
     source: {
         type: String
     }
