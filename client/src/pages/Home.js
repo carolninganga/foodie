@@ -8,14 +8,14 @@ import API from '../utils/API';
 import { Col, Row, Container } from '../components/Grid';
 import { List } from '../components/List';
 import Form from "../components/Form";
-// import SimpleForm from "../components/Chatbot/Chat";
+import './home.css'
 
 class Home extends Component {
     state = {
         stores: [],
         term: '',
         location: '',
-        message: 'What do you feel like eating'
+        message: ''
     };
 
     handleInputChange = event => {
@@ -74,7 +74,7 @@ class Home extends Component {
                         <h1 className="text-center">
                             <strong>Restaurant Search at Foodie</strong>
                         </h1>
-                        <h2 className="text-center">Search for and Save Restaurant of Interest</h2>
+                        <h4 className="text-center">Search for and Save Restaurant of Interest</h4>
                     </Col>
 
                     <Col size="md-12">

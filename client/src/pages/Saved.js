@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import API from '../utils/API';
 import { Col, Row, Container } from '../components/Grid';
 import { List } from '../components/List';
+import './saved.css'
 
 
 class Saved extends Component {
@@ -46,10 +47,10 @@ class Saved extends Component {
             <Container>
             <Row>
                 <Col size="md-12">
-                    <h1 className="text-center">
+                    <h3 className="text-center">
                         <strong>Search Restaurant With Foodie</strong>
-                    </h1>
-                    <h2 className="text-center">Search for and Save Stores of Interest</h2>
+                    </h3>
+                    <h4 className="text-center">Search for and Save Stores of Interest</h4>
 
                 </Col>
             </Row>
