@@ -15,3 +15,17 @@
 .navbar-toggler {
     background-color: #ffffff;
 }
+
+button {
+    border-radius: 8px !important;
+}
+
+
+button {
+    transition-duration: 0.4s !important;
+  }
+  
+button:hover {
+    background-color: #2196F3 !important; /* Green */
+    color: white !important;
+  }
