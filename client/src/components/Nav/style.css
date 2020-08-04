@@ -29,3 +29,11 @@ button:hover {
     background-color: #2196F3 !important; /* Green */
     color: white !important;
   }
+
+a {
+    color: #2196F3 
+}
+
+a:hover{
+    color: white !important;
+}
