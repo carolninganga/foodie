@@ -23,7 +23,7 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "nodemailer": "^6.4.11",
+    "nodemailer": "^6.4.16",
     "react-mail-form": "^2.1.0",
     "react-simple-chatbot": "^0.6.1",
     "react-simple-maps": "^2.1.2",
